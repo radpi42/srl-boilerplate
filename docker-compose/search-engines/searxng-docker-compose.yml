@@ -1,0 +1,11 @@
+version: '3.3'
+services:
+    searxng:
+        ports:
+            - '8081:8080'
+        volumes:
+            - '${PWD}/searxng:/etc/searxng'
+        environment:
+            - 'BASE_URL=https://searx.superradlab.com:$PORT/'
+            - INSTANCE_NAME=my-instance
+        image: searxng/searxng

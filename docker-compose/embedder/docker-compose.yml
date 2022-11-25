@@ -1,0 +1,17 @@
+version: '3.3'
+services:
+    embedder:
+        ports:
+            - '4000:4000'
+        environment:
+            - EBPORT=4000
+            - EBPASS=changeme #change this to your choosen password
+            - EBSECRET=4jkdmakl2l
+        volumes:
+            - embedderdb:/var/db
+            - embedderuploads:/uploads
+        image: waveringana/embedder:latest
+        network_mode: bridge
+volumes:
+    embedderdb:
+    embedderuploads:

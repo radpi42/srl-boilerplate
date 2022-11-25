@@ -1,0 +1,17 @@
+version: "2.1"
+
+services:
+  ntfy:
+    image: binwiederhier/ntfy
+    container_name: ntfy
+    command:
+      - serve
+    environment:
+      - TZ=America/Los_Angeles   # optional: set desired timezone
+    user: 1000:1000 # optional: replace with your own user/group or uid/gid
+    volumes:
+      - /home/radpivm/nfty/var/cache/ntfy:/var/cache/ntfy
+      - /home/radpivm/nfty/etc/ntfy:/etc/ntfy
+    ports:
+      - 8081:80
+    restart: unless-stopped

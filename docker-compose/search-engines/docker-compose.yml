@@ -1,0 +1,18 @@
+# a docker compose file to spin up both whoogle and searxng in one go
+version: '3.3'
+services:
+    searxng:
+        ports:
+            - '8081:8080'
+        volumes:
+            - '${PWD}/searxng:/etc/searxng'
+        environment:
+            - 'BASE_URL=https://searx.superradlab.com:$PORT/'
+            - INSTANCE_NAME=my-instance
+        image: searxng/searxng
+
+    whoogle-search:
+        ports:
+            - '8082:5000'
+        container_name: whoogle-search
+        image: 'benbusby/whoogle-search:latest'

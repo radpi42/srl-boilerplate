@@ -1,0 +1,20 @@
+#Docker compose file to run guacamole 
+---
+version: "2"
+services:
+  guacamole:
+    image: oznu/guacamole
+    container_name: guacamole
+    volumes:
+      - /home/radpivm/guac/config:/config
+    ports:
+      - 8080:8080
+    restart: unless-stopped
+    networks:
+      - guac-net
+
+networks:
+  guac-net:
+    external: false
+    
+...

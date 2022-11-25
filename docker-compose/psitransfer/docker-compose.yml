@@ -1,0 +1,10 @@
+version: '3.3'
+services:
+    psitransfer:
+        ports:
+            - '0.0.0.0:3000:3000'
+        environment:
+            - PSITRANSFER_ADMIN_PASS=secret #change secret to your own passwd
+        volumes:
+            - '$PWD/data:/data'
+        image: psitrax/psitransfer
