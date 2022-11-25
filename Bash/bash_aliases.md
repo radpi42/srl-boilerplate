@@ -73,9 +73,3 @@ alias temp="vcgencmd measure_temp"
 # alias gdf="sh /home/radpivm/glances/glances-debian-full.sh"
 # alias gdb="sh /home/radpivm/glances/glances-debian-basic.sh"
 ```
-
-Pre-made file - [.bash\_aliases](https://bookstack.superradlab.com/attachments/5)
-
-alias ctop="docker run --rm -ti --name=ctop -v /var/run/docker.sock:/var/run/docker.sock quay.io/vektorlab/ctop:latest"
-
-alias glance="docker run --rm -v /var/run/docker.sock:/var/run/docker.sock:ro --pid host --network host -it nicolargo/glances:alpine-latest-full"
