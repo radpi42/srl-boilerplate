@@ -1,6 +1,6 @@
 # bash aliases
 
-\#add this to the .bashrc file if its not already in there
+add this to the .bashrc file if its not already in there
 
 ```bash
 if [ -f ~/.bash_aliases ]; then
