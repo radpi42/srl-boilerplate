@@ -23,4 +23,10 @@ sudo apt-get update
 
 sudo apt-get install docker-ce docker-ce-cli containerd.io docker-compose-plugin -y
 
-sudo usermod -aG docker radpivm
+# as root run command below and change the $USER to the username you want to be able to run docker commands without needing sudo
+# usermod -aG docker $USER
+
+echo "installation complete."
+echo "To run docker commands without needed sudo as non-root user"
+echo "run " + "usermod -aG docker $USER"
+echo "but change the $USER to the usename you want to be able to do that"
