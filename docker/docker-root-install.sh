@@ -1,4 +1,4 @@
-apt update
+apt update && apt upgrade -y
 
 apt-get install \
     ca-certificates \
