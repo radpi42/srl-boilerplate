@@ -3,7 +3,7 @@
 # name install-docker-ubuntu.sh
 # this scriupt installs docker and docker compose and sets user radpivm to docker group
 
-sudo apt update
+sudo apt update && sudo apt upgrade -y
 
 sudo apt-get install \
     ca-certificates \
